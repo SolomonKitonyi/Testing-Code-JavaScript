@@ -26,3 +26,10 @@ describe("greet", () => {
     expect(result).toContain("Solomon");
   });
 });
+
+describe("getCurrencies", () => {
+  it("Should return supported currencies", () => {
+    const result = lib.getCurrencies();
+    expect(result).toEqual(expect.arrayContaining(["USD", "AUD", "EUR"]));
+  });
+});
