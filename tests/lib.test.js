@@ -20,6 +20,9 @@ describe("absolute", () => {
 describe("greet", () => {
   it("Should return the greeting message", () => {
     const result = lib.greet("Solomon");
-    expect(result).toBe("Welcome Solomon");
+    expect(result).toMatch(/Solomon/);
+
+    //Or you can use
+    expect(result).toContain("Solomon");
   });
 });
