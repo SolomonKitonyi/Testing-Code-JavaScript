@@ -15,5 +15,5 @@ module.exports.getCurrencies = function () {
 
 //Testing Objects
 module.exports.getProduct = function (productId) {
-  return { id: productId, price: 10 };
+  return { id: productId, price: 10, category: "Goods" };
 };
