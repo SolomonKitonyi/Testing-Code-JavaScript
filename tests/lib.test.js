@@ -52,4 +52,10 @@ describe("registerUser", () => {
       }).toThrow();
     });
   });
+
+  it("Should return user object if valid username is passed", () => {
+    const result = lib.registerUser("Solomon");
+    expect(result).toMatchObject({ username: "Solomon" });
+    expect(result.id).toBeGreaterThan(0);
+  });
 });
