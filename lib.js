@@ -17,3 +17,9 @@ module.exports.getCurrencies = function () {
 module.exports.getProduct = function (productId) {
   return { id: productId, price: 10, category: "Goods" };
 };
+
+//Testing exceptions
+module.exports.registerUser = function (username) {
+  if (!username) throw new Error("Username is required");
+  return { id: newDate().getTime(), username: username };
+};
